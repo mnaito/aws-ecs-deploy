@@ -1,0 +1,22 @@
+# default build target 
+TARGET := path-to-repository
+
+# AWS region for ECR repository URL
+AWS_REGION           := ap-northeast-1
+
+# AWSへのアクセスに使用するデフォルトのプロファイル名
+# ~/.aws/config の内容をプロジェクトメンバー全員で共有することが望ましい
+DEFAULT_AWS_PROFILE  := sample-aws-profile
+DEFAULT_GIT_BRANCH   := master
+
+# ECS/ECR configurations
+ECS_SERVICE_NAME     := dev-sample-ecssvc-pub
+ECS_CLUSTER_NAME     := dev-sample-ecs-cluster
+TASK_FAMILY          := public
+ECR_ACCOUNT_ID       := 9999999999999
+
+#ECS_ELB_LISTENERS      := arn:aws:elasticloadbalancing:ap-northeast-1:999999999999:listener/app/dev-sample--alb/xxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx arn:aws:elasticloadbalancing:ap-northeast-1:999999999999:listener/app/dev-sample--alb/xxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx 
+
+#ECS_ALB_LISTENER       := arn:aws:elasticloadbalancing:ap-northeast-1:999999999999:listener/app/dev-sample--alb/xxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx
+#ECS_BLUE_SERVICE_NAME  := dev-sample-ecssvc-pub
+#ECS_GREEN_SERVICE_NAME := dev-sample-ecssvc-pub-green

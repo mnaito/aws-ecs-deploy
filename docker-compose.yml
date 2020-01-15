@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+
+  sample:
+    container_name: sample
+    #build:
+    #  context: ../path-to-repository/
+    init: true
+    networks:
+        - sample-net
+    ports:
+     - "80:80"
+    env_file:
+      - env/sample.env
+    #volumes:
+    #  - ../path-to-repository/file:/usr/local/file
+
+networks:
+  sample-net:
